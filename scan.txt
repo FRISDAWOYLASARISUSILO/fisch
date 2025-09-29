@@ -1,0 +1,681 @@
+ 🔍 FISCH REMOTE FINDER STARTED
+💾 Auto-save enabled: fisch_remote_scan_20250929_215730.txt
+========================================
+🔵 RemoteFunction: ReplicatedStorage.DiscoveredSDK.Assets.Remotes.Request
+🟢 RemoteEvent: ReplicatedStorage.DiscoveredSDK.Assets.Remotes.DiscoveredSDK:PerkUsedEvent
+🟢 RemoteEvent: ReplicatedStorage.DiscoveredSDK.Assets.Remotes.DiscoveredSDK:PerkClaimedEvent
+🟢 RemoteEvent: ReplicatedStorage.DiscoveredSDK.Assets.Remotes.DiscoveredSDK:PassSeenEvent
+🟢 RemoteEvent: ReplicatedStorage.DiscoveredSDK.Assets.Remotes.DiscoveredSDK:PassViewedEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogCustomEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogEconomyEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogFunnelStepEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogOnbiardingFunnelStepEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogProgressionStartEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogProgressionFailEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.LogProgressionCompleteEvent
+🟢 RemoteEvent: ReplicatedStorage.JWE_Events.SurveyRemote
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/RequestCache
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/GetSpawnPosition
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Notification
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SendNewFormatData
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ResourceStream/Request
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Boats/Open
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ABShipGuidance/DestroyGuideLocation
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestCutscene
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestCutsceneSync
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/CameraReplicationFocusSet
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Monetization/BuyProduct
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Level/LevelUp
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Level/Progress
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FTUE.DockMarker
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DoorRemote
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/GetDoorState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/OpenTheDepthsGate
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/RequestOpenTheDepthsGate
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/NorthEvent/PlayerCanGetItem
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/NorthEvent/PlayerClaimItem
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PuzzleButtonService/RequestState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PuzzleButtonService/UpdateState
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/NorthExp/DialogHas3Shards
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/NorthExp/PurchaseShard
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/NorthExp/Kill
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SubmarineCraftService/PlacePart
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Dr Glimmerfin/Talked
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Dr Glimmerfin/QuestCompleted
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Captain Ahab/HasMobyDick
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestFade
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/SkinCrates/RequestSpin
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/SkinCrates/Purchase
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RodChanged
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ToggleSkinCrates
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/RequestOpenSkinCrates
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/AmbienceCheck
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ChangeRodSkin
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/RodSkinService/HasSkin
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Backpack/Equip
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Backpack/Favourite
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Backpack/SetHotbar
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Boats/Spawn
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Boats/Purchase
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Boats/Despawn
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Boats/Close
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Titles/Equip
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Settings/Update
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Lantern/Equip
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Bobber/Equip
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Bait/Equip
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Rod/Equip
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Rod/Favorite
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Mastery/LoadQuests
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Mastery/ClaimQuest
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Mastery/Complete
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ReturnToSurface
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ClientInfo/GetPreferredInput
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/GetZone
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ABShipGuidance/GuideLocation
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ABSellTextScreen/GuideMerchant
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ABSellTextScreen/GuideAppraisal
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ABSellTextScreen/GuideDestroy
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/MarianaPodiumService/Place
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/UpdateOfferedItems
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/TradeStarted
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/TradeEnded
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Aquarium/PlaceFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Aquarium/RemoveFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Aquarium/PurchaseFish
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Aquarium/FishUpdated
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Aquarium/GetFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Aquarium/Open
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DailyShop/Open
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DailyShop/ReplicateItems
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DailyShop/Purchase
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DailyShop/Refresh
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/TimeMission/ClaimReward
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/TimeMission/LoadRewards
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/TimeMission/RequestChallengeUI
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/TimeMission/Skip
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/TimeMission/SpinReward
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/KrakenPuzzleService/ConfirmButton
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/KrakenPuzzleService/Finished
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PoseidonPuzzleService/PlaceFish
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PoseidonPuzzleService/RequestInfo
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PoseidonPuzzleService/RequestInfo
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FastTravel/ToggleUI
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FastTravel/Fade
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FastTravel/TeleportFailed
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ReputationService/GetRank
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WaterTrapsZone/CameraFOV
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WaterTrapsZone/BarrelsShaker
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Fischfest/TideAnimation
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Gift/SetTarget
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Gift/FinishPrompt
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Gift/EndPromptState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Gift/AlertMessage
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Gift/GetPrompted
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Nuke
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestNukeMinigame
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PerformanceController/EnablePerformanceMode
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PerformanceController/DisableFlags
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Fillionaire/Prompt
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Fillionaire/AskReward
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RefreshMoonlitBonus
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestArea
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/InviteFriendController/Prompt
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ActivatorClientActive
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ActivatorClientDisable
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ActivatorServerActive
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ActivatorServerDisable
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ItemCollectorCollect
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/OpenEventBestiary
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/TimeEvent/GetEventTime
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/RequestActivateAccessPanel
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Logs/GetLogs
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/BoostModifier
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/BoostBaitModifier
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/CelestialPassive
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/BaitWhirlPoolPassive/Visual
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/SetZone
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/RequestTeleportCFrame
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/TeleportService/RequestTeleport
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/UpdateArchivesPillarState
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ItemSpawnCollect
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Lanterns/SetEquipped
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DateReward/Action
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ToggleDateReward
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/AddItem
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/RemoveItem
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/CancelTrade
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Trade/SetReady
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/AppraiseAnywhere/GetCost
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/AppraiseAnywhere/HaveValidFish
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/AppraiseAnywhere/Fire
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/BasicFTUEFinished
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/MycoReunionQuest/NpcStatus
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/MycoReunionQuest/NpcArrive
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LukaAndKaelService/UpdateState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LukaAndKaelService/CollectPendant
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LukaAndKaelService/FinalDialogue
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/IcePuzzle/UpdateIceState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/IcePuzzle/UnlockRod
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/IcePuzzle/ToggleEffects
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/BuyBait/Show
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/MiningService/UpdateOreState
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/NorthFinalPuzzleService/RequestState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/NorthFinalPuzzleService/UpdateState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/NorthFinalPuzzleService/Place
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LimitedQuestsService/RequestRefresh
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/LimitedQuestsService/GetEventTime
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/LimitedQuestsService/GetRefreshTime
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FastTravel/Teleport
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/CursedNuke
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestCursedNukeMinigame
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/CultCursedMeterService/RequestRewardClaim
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LeaveReward.MenuOpened
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LeaveReward.MenuClosed
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LeaveReward.SpawnGift
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/LeaveReward.OpenGift
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FTUE.GuidePlayer
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FTUE.CastMarker
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/CraftingThings/PlacePart
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/QuestCompassService/RequestNereastAngler
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AtomicNuke
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/RequestAtomicNukeMinigame
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AFKArea/BuyDoubleLuck
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AFKArea/Leave
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/FrozenLeverPuzzle/ActiveLever
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/FrozenLeverPuzzle/RequestLeverState
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/FrozenLeverPuzzle/RequestEnabledLevers
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ShellMerchant/ReplicateItems
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ShellMerchant/Purchase
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FollowingNpcDebug
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/UtilityBoat/PlaceUtility
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/UtilityBoat/FinishedUtility
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/UtilityBoat/FailedClick
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/UtilityBoat/FailedUtility
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PodiumService/Place
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PodiumService/Claim
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PodiumService/Finish
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PodiumService/GetState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PodiumService/UpdateState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AutoFishing/Toggle
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/GameMuteService/MuteGame
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Commerce/OpenGui
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Commerce/TryBuy
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PersonalAquarium/WaitForRootPart
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/UpdateVisitorState
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/Join
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/AddFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/RemoveFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/BuyNextSlot
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/ClaimRewards
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/ActivateFishFood
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/PurchaseFishFood
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PersonalAquarium/Tank/GetEncodedAquariumInfo
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/Tank/AddedFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/PersonalAquarium/Tank/LostFish
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/PersonalAquarium/JoinUnavailableAquarium
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ReturnToLastIsland
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/EventAppraiseService/Complete
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/EventAppraiseService/RequestAppraiseUI
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/EventAppraiseService/SelectIndex
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/EventAppraiseService/StartAppraise
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/EventAppraiseService/CancelAppraise
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/EventAppraiseService/TakeNow
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/CarrotService/ClaimCode
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WitcherPotion/PlaceFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WitcherPotion/ClaimFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WitcherPotion/StartCraft
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WitcherPotion/SelectRecipe
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/WitcherPotion/TakePotion
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ReputationQuests/Reload
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ReputationQuests/ClaimQuest
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ReputationQuests/SelectQuest
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ReputationQuests/AskToRefreshQuests
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FriendsQuestService/ToggleFriendsQuestUI
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FriendsQuestService/UpdateQuest
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FriendsQuestService/Invite
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FriendsQuestService/AcceptInvite
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/FriendsQuestService/Spin
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/Aquarium/GetFish
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/UpdateInfo
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/SalesBoothService/RequestSalesBoothInfo
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/Claim
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/AddItem
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/RemoveItem
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/FavoriteItem
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/PurchaseItem
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/SalesBoothService/EquipSkin
+   🎯 SKIN CRATES RELATED!
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/VideoAds/Play
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/VenueHatchUpdate
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Guide/ReplicateQuests
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/CthuluAttack
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/DialogInteract
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AnglerfishMinigame/FishSpawn
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AnglerfishMinigame/DeathEffect
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ChessMinigame/Interact
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ChessMinigame/MovePiece
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ChessMinigame/OpenGate
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ChessMinigame/ResetPieces
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ChessMinigame/StartTimer
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FishPodium/LoadPodium
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/FishPodium/Place
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ZeusPuzzle/GetDoorState
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/ZeusPuzzle/CheckCode
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ShellMerchant/Open
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/MilaHunt/Start
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/SubmarineSpawnRequestSubmariner
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Monetization/UpdateCreditsPrice
+🔵 RemoteFunction: ReplicatedStorage.packages.Net.RF/LimitedBobbers.BuyBundleWithCoins
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/AquariumDialog/NpcStatus
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DailyReward/Show
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/DailyReward/Claim
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/Quests/ToggleTrack
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ResilienceModifier
+🟢 RemoteEvent: ReplicatedStorage.packages.Net.RE/ZenithMinigameStatus
+🟢 RemoteEvent: ReplicatedStorage.packages.Replion.Remotes.Added
+🟢 RemoteEvent: ReplicatedStorage.packages.Replion.Remotes.Removed
+🟢 RemoteEvent: ReplicatedStorage.packages.Replion.Remotes.Update
+🟢 RemoteEvent: ReplicatedStorage.packages.Replion.Remotes.UpdateReplicateTo
+🟢 RemoteEvent: ReplicatedStorage.packages.Replion.Remotes.Set
+🟢 RemoteEvent: ReplicatedStorage.packages.Replion.Remotes.ArrayUpdate
+🟢 RemoteEvent: ReplicatedStorage.resources.replicated.fishing.shakeui.cancel
+🟢 RemoteEvent: ReplicatedStorage.PostieSent
+🟢 RemoteEvent: ReplicatedStorage.PostieReceived
+🟢 RemoteEvent: ReplicatedStorage.GameAnalyticsRemoteConfigs
+🟢 RemoteEvent: ReplicatedStorage.GameAnalyticsError
+🔵 RemoteFunction: ReplicatedStorage.Remotes.Request
+🟢 RemoteEvent: ReplicatedStorage.Remotes.PlayImmersiveVideoEvent
+🟢 RemoteEvent: ReplicatedStorage.Remotes.ImmersiveVideoQueuedEvent
+🟢 RemoteEvent: ReplicatedStorage.conch_networking.invoke_server_command
+🟢 RemoteEvent: ReplicatedStorage.conch_networking.create_user
+🟢 RemoteEvent: ReplicatedStorage.conch_networking.update_user_roles
+🟢 RemoteEvent: ReplicatedStorage.conch_networking.update_role_permissions
+🟢 RemoteEvent: ReplicatedStorage.conch_networking.register_command
+🟢 RemoteEvent: ReplicatedStorage.conch_networking.log
+🟢 RemoteEvent: ReplicatedStorage.events.anno_catch
+🟢 RemoteEvent: ReplicatedStorage.events.dialogstart
+🟢 RemoteEvent: ReplicatedStorage.events.reelfinished
+🟢 RemoteEvent: ReplicatedStorage.events.anno_equip
+🟢 RemoteEvent: ReplicatedStorage.events.finishedloading
+🟢 RemoteEvent: ReplicatedStorage.events.LocalCutscene
+🟢 RemoteEvent: ReplicatedStorage.events.anno_unlock
+🟢 RemoteEvent: ReplicatedStorage.events.anno_titleunlock
+🟢 RemoteEvent: ReplicatedStorage.events.anno_thought
+🟢 RemoteEvent: ReplicatedStorage.events.anno_bait
+🟢 RemoteEvent: ReplicatedStorage.events.anno_bestiary
+🟢 RemoteEvent: ReplicatedStorage.events.claimGroupReward
+🟢 RemoteEvent: ReplicatedStorage.events.drown
+🟢 RemoteEvent: ReplicatedStorage.events.anno_boat
+🔵 RemoteFunction: ReplicatedStorage.events.offeritem
+🟢 RemoteEvent: ReplicatedStorage.events.anno_top
+🟢 RemoteEvent: ReplicatedStorage.events.anno_quest
+🟢 RemoteEvent: ReplicatedStorage.events.anno_serverEvent
+🔵 RemoteFunction: ReplicatedStorage.events.enchant
+🟢 RemoteEvent: ReplicatedStorage.events.showchangelog
+🟢 RemoteEvent: ReplicatedStorage.events.afk
+🔵 RemoteFunction: ReplicatedStorage.events.selleverything
+🟢 RemoteEvent: ReplicatedStorage.events.selfannounce
+🟢 RemoteEvent: ReplicatedStorage.events.bestiarycomplete
+🟢 RemoteEvent: ReplicatedStorage.events.discoverlocation
+🟢 RemoteEvent: ReplicatedStorage.events.anno_thought_big
+🟢 RemoteEvent: ReplicatedStorage.events.fishMutation
+🟢 RemoteEvent: ReplicatedStorage.events.runcode
+🟢 RemoteEvent: ReplicatedStorage.events.getcurrency
+🟢 RemoteEvent: ReplicatedStorage.events.C$
+🟢 RemoteEvent: ReplicatedStorage.events.setWaterTransparency
+🔵 RemoteFunction: ReplicatedStorage.events.SetGifting
+🟢 RemoteEvent: ReplicatedStorage.events.anno_server_chat
+🟢 RemoteEvent: ReplicatedStorage.events.rodwave
+🟢 RemoteEvent: ReplicatedStorage.events.nuke_spawned
+🟢 RemoteEvent: ReplicatedStorage.events.treasure_map_unlock
+🟢 RemoteEvent: ReplicatedStorage.events.spawn_treasure
+🟢 RemoteEvent: ReplicatedStorage.events.load_treasure
+🟢 RemoteEvent: ReplicatedStorage.events.GetTreasureMapCoordinates
+🟢 RemoteEvent: ReplicatedStorage.events.open_treasure
+🟢 RemoteEvent: ReplicatedStorage.events.notification
+🟢 RemoteEvent: ReplicatedStorage.events.debug_hammerhit
+🔵 RemoteFunction: ReplicatedStorage.events.CanCraft
+🔵 RemoteFunction: ReplicatedStorage.events.AttemptCraft
+🟢 RemoteEvent: ReplicatedStorage.events.voyagerlaser
+🟢 RemoteEvent: ReplicatedStorage.events.shakehudeffect
+🟢 RemoteEvent: ReplicatedStorage.events.bite_event_sound
+🟢 RemoteEvent: ReplicatedStorage.events.seraphiclaser
+🔵 RemoteFunction: ReplicatedStorage.events.SellAll
+🟢 RemoteEvent: ReplicatedStorage.events.vessel_unlock
+🔵 RemoteFunction: ReplicatedStorage.events.Sell
+🔵 RemoteFunction: ReplicatedStorage.events.CheckHasSkin
+   🎯 SKIN CRATES RELATED!
+🟢 RemoteEvent: ReplicatedStorage.events.ridezipline
+🟢 RemoteEvent: ReplicatedStorage.events.debug_swordhit
+🟢 RemoteEvent: ReplicatedStorage.events.SetSearchList
+🟢 RemoteEvent: ReplicatedStorage.events.setFightState
+🟢 RemoteEvent: ReplicatedStorage.events.LoadInventoryPage
+🟢 RemoteEvent: ReplicatedStorage.events.debug_daggerhit
+🟢 RemoteEvent: ReplicatedStorage.events.RagdollMessage
+🟢 RemoteEvent: ReplicatedStorage.events.exalted_rod_animation
+🟢 RemoteEvent: ReplicatedStorage.events.debug_guitar
+🟢 RemoteEvent: ReplicatedStorage.events.debug_giveprogress
+🟢 RemoteEvent: ReplicatedStorage.events.rod_cast
+🟢 RemoteEvent: ReplicatedStorage.events.HeartOfZeusBeam
+🟢 RemoteEvent: ReplicatedStorage.events.TNTReveal
+🟢 RemoteEvent: ReplicatedStorage.events.RemoveMyTeleportScreen
+🟢 RemoteEvent: ReplicatedStorage.events.chat
+🟢 RemoteEvent: ReplicatedStorage.events.DamageRock
+🟢 RemoteEvent: ReplicatedStorage.events.thelimited_salesperson
+🟢 RemoteEvent: ReplicatedStorage.events.mikulaser
+🟢 RemoteEvent: ReplicatedStorage.events.scyllaAttack
+🟢 RemoteEvent: ReplicatedStorage.events.scyllaDamageEvent
+🟢 RemoteEvent: ReplicatedStorage.events.scyllaSetTarget
+🟢 RemoteEvent: ReplicatedStorage.events.easter_updatequest
+🟢 RemoteEvent: ReplicatedStorage.events.BrickRodEvents.ShowMessages
+🟢 RemoteEvent: ReplicatedStorage.events.Open Egg
+🟢 RemoteEvent: ReplicatedStorage.events.UICompatibility
+🟢 RemoteEvent: ReplicatedStorage.events.CancelEmote
+🟢 RemoteEvent: ReplicatedStorage.events.cursed_nuke_spawned
+🟢 RemoteEvent: ReplicatedStorage.events.keepersTorchHit
+🟢 RemoteEvent: ReplicatedStorage.events.shootKeepersTorch
+🟢 RemoteEvent: ReplicatedStorage.events.clientTakeDamage
+🟢 RemoteEvent: ReplicatedStorage.events.ToggleEclipseDomainUI
+🔵 RemoteFunction: ReplicatedStorage.events.RequestRedemption
+🔵 RemoteFunction: ReplicatedStorage.events.enchantrod
+🟢 RemoteEvent: ReplicatedStorage.events.atomic_nuke_spawned
+🔵 RemoteFunction: ReplicatedStorage.events.sVeRZUYib 
+🔵 RemoteFunction: ReplicatedStorage.InGameExplorer_Shared.InGameExplorer_RemoteFunction
+🟢 RemoteEvent: ReplicatedStorage.InGameExplorer_Shared.InGameExplorer_RemoteEvent
+
+📋 CHECKING SPECIFIC STRUCTURES:
+------------------------------
+✅ packages folder found
+✅ Net folder found
+📁 Contents of Net folder:
+  - RF/RequestCache (RemoteFunction)
+  - RF/GetSpawnPosition (RemoteFunction)
+  - RE/Notification (RemoteEvent)
+  - RE/SendNewFormatData (RemoteEvent)
+  - RF/ResourceStream/Request (RemoteFunction)
+  - RE/Boats/Open (RemoteEvent)
+  - RE/ABShipGuidance/DestroyGuideLocation (RemoteEvent)
+  - RE/RequestCutscene (RemoteEvent)
+  - RE/RequestCutsceneSync (RemoteEvent)
+  - RE/CameraReplicationFocusSet (RemoteEvent)
+  - URE/CameraReplicationFocusUpdate (UnreliableRemoteEvent)
+  - RE/Monetization/BuyProduct (RemoteEvent)
+  - RE/Level/LevelUp (RemoteEvent)
+  - RE/Level/Progress (RemoteEvent)
+  - RE/FTUE.DockMarker (RemoteEvent)
+  - RE/DoorRemote (RemoteEvent)
+  - RF/GetDoorState (RemoteFunction)
+  - RE/OpenTheDepthsGate (RemoteEvent)
+  - RF/RequestOpenTheDepthsGate (RemoteFunction)
+  - RF/NorthEvent/PlayerCanGetItem (RemoteFunction)
+  - RF/NorthEvent/PlayerClaimItem (RemoteFunction)
+  - RF/PuzzleButtonService/RequestState (RemoteFunction)
+  - RE/PuzzleButtonService/UpdateState (RemoteEvent)
+  - RF/NorthExp/DialogHas3Shards (RemoteFunction)
+  - RF/NorthExp/PurchaseShard (RemoteFunction)
+  - RF/NorthExp/Kill (RemoteFunction)
+  - RE/SubmarineCraftService/PlacePart (RemoteEvent)
+  - RF/Dr Glimmerfin/Talked (RemoteFunction)
+  - RF/Dr Glimmerfin/QuestCompleted (RemoteFunction)
+  - RF/Captain Ahab/HasMobyDick (RemoteFunction)
+  - RE/RequestFade (RemoteEvent)
+  - RF/SkinCrates/RequestSpin (RemoteFunction)
+  - RF/SkinCrates/Purchase (RemoteFunction)
+  - RE/RodChanged (RemoteEvent)
+  - RE/ToggleSkinCrates (RemoteEvent)
+  - RF/RequestOpenSkinCrates (RemoteFunction)
+  - RF/AmbienceCheck (RemoteFunction)
+  - RE/ChangeRodSkin (RemoteEvent)
+  - RF/RodSkinService/HasSkin (RemoteFunction)
+  - RE/Backpack/Equip (RemoteEvent)
+  - RE/Backpack/Favourite (RemoteEvent)
+  - RE/Backpack/SetHotbar (RemoteEvent)
+  - RF/Boats/Spawn (RemoteFunction)
+  - RF/Boats/Purchase (RemoteFunction)
+  - RE/Boats/Despawn (RemoteEvent)
+  - RE/Boats/Close (RemoteEvent)
+  - RE/Titles/Equip (RemoteEvent)
+  - RE/Settings/Update (RemoteEvent)
+  - RE/Lantern/Equip (RemoteEvent)
+  - RE/Bobber/Equip (RemoteEvent)
+  - RE/Bait/Equip (RemoteEvent)
+  - RE/Rod/Equip (RemoteEvent)
+  - RF/Rod/Favorite (RemoteFunction)
+  - RF/Mastery/LoadQuests (RemoteFunction)
+  - RE/Mastery/ClaimQuest (RemoteEvent)
+  - RE/Mastery/Complete (RemoteEvent)
+  - RE/ReturnToSurface (RemoteEvent)
+  - RF/ClientInfo/GetPreferredInput (RemoteFunction)
+  - RF/GetZone (RemoteFunction)
+  - RE/ABShipGuidance/GuideLocation (RemoteEvent)
+  - RE/ABSellTextScreen/GuideMerchant (RemoteEvent)
+  - RE/ABSellTextScreen/GuideAppraisal (RemoteEvent)
+  - RE/ABSellTextScreen/GuideDestroy (RemoteEvent)
+  - RE/MarianaPodiumService/Place (RemoteEvent)
+  - RE/Trade/UpdateOfferedItems (RemoteEvent)
+  - RE/Trade/TradeStarted (RemoteEvent)
+  - RE/Trade/TradeEnded (RemoteEvent)
+  - RE/Aquarium/PlaceFish (RemoteEvent)
+  - RE/Aquarium/RemoveFish (RemoteEvent)
+  - RE/Aquarium/PurchaseFish (RemoteEvent)
+  - RE/Aquarium/FishUpdated (RemoteEvent)
+  - RE/Aquarium/GetFish (RemoteEvent)
+  - RE/Aquarium/Open (RemoteEvent)
+  - RE/DailyShop/Open (RemoteEvent)
+  - RE/DailyShop/ReplicateItems (RemoteEvent)
+  - RE/DailyShop/Purchase (RemoteEvent)
+  - RE/DailyShop/Refresh (RemoteEvent)
+  - RE/TimeMission/ClaimReward (RemoteEvent)
+  - RE/TimeMission/LoadRewards (RemoteEvent)
+  - RE/TimeMission/RequestChallengeUI (RemoteEvent)
+  - RE/TimeMission/Skip (RemoteEvent)
+  - RE/TimeMission/SpinReward (RemoteEvent)
+  - RF/KrakenPuzzleService/ConfirmButton (RemoteFunction)
+  - RF/KrakenPuzzleService/Finished (RemoteFunction)
+  - RE/PoseidonPuzzleService/PlaceFish (RemoteEvent)
+  - RF/PoseidonPuzzleService/RequestInfo (RemoteFunction)
+  - RE/PoseidonPuzzleService/RequestInfo (RemoteEvent)
+  - RE/FastTravel/ToggleUI (RemoteEvent)
+  - RE/FastTravel/Fade (RemoteEvent)
+  - RE/FastTravel/TeleportFailed (RemoteEvent)
+  - RF/ReputationService/GetRank (RemoteFunction)
+  - RE/WaterTrapsZone/CameraFOV (RemoteEvent)
+  - RE/WaterTrapsZone/BarrelsShaker (RemoteEvent)
+  - RE/Fischfest/TideAnimation (RemoteEvent)
+  - RE/Gift/SetTarget (RemoteEvent)
+  - RE/Gift/FinishPrompt (RemoteEvent)
+  - RE/Gift/EndPromptState (RemoteEvent)
+  - RE/Gift/AlertMessage (RemoteEvent)
+  - RF/Gift/GetPrompted (RemoteFunction)
+  - RE/Nuke (RemoteEvent)
+  - RE/RequestNukeMinigame (RemoteEvent)
+  - RE/PerformanceController/EnablePerformanceMode (RemoteEvent)
+  - RE/PerformanceController/DisableFlags (RemoteEvent)
+  - RE/Fillionaire/Prompt (RemoteEvent)
+  - RE/Fillionaire/AskReward (RemoteEvent)
+  - RE/RefreshMoonlitBonus (RemoteEvent)
+  - RE/RequestArea (RemoteEvent)
+  - RE/InviteFriendController/Prompt (RemoteEvent)
+  - RE/ActivatorClientActive (RemoteEvent)
+  - RE/ActivatorClientDisable (RemoteEvent)
+  - RF/ActivatorServerActive (RemoteFunction)
+  - RE/ActivatorServerDisable (RemoteEvent)
+  - RF/ItemCollectorCollect (RemoteFunction)
+  - RE/OpenEventBestiary (RemoteEvent)
+  - RF/TimeEvent/GetEventTime (RemoteFunction)
+  - RF/RequestActivateAccessPanel (RemoteFunction)
+  - RF/Logs/GetLogs (RemoteFunction)
+  - RE/BoostModifier (RemoteEvent)
+  - RE/BoostBaitModifier (RemoteEvent)
+  - RE/CelestialPassive (RemoteEvent)
+  - RE/BaitWhirlPoolPassive/Visual (RemoteEvent)
+  - RF/SetZone (RemoteFunction)
+  - RF/RequestTeleportCFrame (RemoteFunction)
+  - RE/TeleportService/RequestTeleport (RemoteEvent)
+  - RE/UpdateArchivesPillarState (RemoteEvent)
+  - RF/ItemSpawnCollect (RemoteFunction)
+  - RF/Lanterns/SetEquipped (RemoteFunction)
+  - RE/DateReward/Action (RemoteEvent)
+  - RE/ToggleDateReward (RemoteEvent)
+  - RE/Trade/AddItem (RemoteEvent)
+  - RE/Trade/RemoveItem (RemoteEvent)
+  - RE/Trade/CancelTrade (RemoteEvent)
+  - RE/Trade/SetReady (RemoteEvent)
+  - RF/AppraiseAnywhere/GetCost (RemoteFunction)
+  - RF/AppraiseAnywhere/HaveValidFish (RemoteFunction)
+  - RF/AppraiseAnywhere/Fire (RemoteFunction)
+  - RE/BasicFTUEFinished (RemoteEvent)
+  - RE/MycoReunionQuest/NpcStatus (RemoteEvent)
+  - RE/MycoReunionQuest/NpcArrive (RemoteEvent)
+  - RE/LukaAndKaelService/UpdateState (RemoteEvent)
+  - RE/LukaAndKaelService/CollectPendant (RemoteEvent)
+  - RE/LukaAndKaelService/FinalDialogue (RemoteEvent)
+  - RE/IcePuzzle/UpdateIceState (RemoteEvent)
+  - RE/IcePuzzle/UnlockRod (RemoteEvent)
+  - RE/IcePuzzle/ToggleEffects (RemoteEvent)
+  - RE/BuyBait/Show (RemoteEvent)
+  - RE/MiningService/UpdateOreState (RemoteEvent)
+  - RF/NorthFinalPuzzleService/RequestState (RemoteFunction)
+  - RE/NorthFinalPuzzleService/UpdateState (RemoteEvent)
+  - RE/NorthFinalPuzzleService/Place (RemoteEvent)
+  - RE/LimitedQuestsService/RequestRefresh (RemoteEvent)
+  - RF/LimitedQuestsService/GetEventTime (RemoteFunction)
+  - RF/LimitedQuestsService/GetRefreshTime (RemoteFunction)
+  - RE/FastTravel/Teleport (RemoteEvent)
+  - RE/CursedNuke (RemoteEvent)
+  - RE/RequestCursedNukeMinigame (RemoteEvent)
+  - RF/CultCursedMeterService/RequestRewardClaim (RemoteFunction)
+  - RE/LeaveReward.MenuOpened (RemoteEvent)
+  - RE/LeaveReward.MenuClosed (RemoteEvent)
+  - RE/LeaveReward.SpawnGift (RemoteEvent)
+  - RE/LeaveReward.OpenGift (RemoteEvent)
+  - RE/FTUE.GuidePlayer (RemoteEvent)
+  - RE/FTUE.CastMarker (RemoteEvent)
+  - RE/CraftingThings/PlacePart (RemoteEvent)
+  - RF/QuestCompassService/RequestNereastAngler (RemoteFunction)
+  - RE/AtomicNuke (RemoteEvent)
+  - RE/RequestAtomicNukeMinigame (RemoteEvent)
+  - RE/AFKArea/BuyDoubleLuck (RemoteEvent)
+  - RE/AFKArea/Leave (RemoteEvent)
+  - RF/FrozenLeverPuzzle/ActiveLever (RemoteFunction)
+  - RF/FrozenLeverPuzzle/RequestLeverState (RemoteFunction)
+  - RF/FrozenLeverPuzzle/RequestEnabledLevers (RemoteFunction)
+  - RE/ShellMerchant/ReplicateItems (RemoteEvent)
+  - RE/ShellMerchant/Purchase (RemoteEvent)
+  - RE/FollowingNpcDebug (RemoteEvent)
+  - RE/UtilityBoat/PlaceUtility (RemoteEvent)
+  - RE/UtilityBoat/FinishedUtility (RemoteEvent)
+  - RE/UtilityBoat/FailedClick (RemoteEvent)
+  - RE/UtilityBoat/FailedUtility (RemoteEvent)
+  - RF/PodiumService/Place (RemoteFunction)
+  - RF/PodiumService/Claim (RemoteFunction)
+  - RF/PodiumService/Finish (RemoteFunction)
+  - RF/PodiumService/GetState (RemoteFunction)
+  - RE/PodiumService/UpdateState (RemoteEvent)
+  - RE/AutoFishing/Toggle (RemoteEvent)
+  - RE/GameMuteService/MuteGame (RemoteEvent)
+  - RE/Commerce/OpenGui (RemoteEvent)
+  - RE/Commerce/TryBuy (RemoteEvent)
+  - RF/PersonalAquarium/WaitForRootPart (RemoteFunction)
+  - RE/UpdateVisitorState (RemoteEvent)
+  - RE/PersonalAquarium/Join (RemoteEvent)
+  - RE/PersonalAquarium/AddFish (RemoteEvent)
+  - RE/PersonalAquarium/RemoveFish (RemoteEvent)
+  - RE/PersonalAquarium/BuyNextSlot (RemoteEvent)
+  - RE/PersonalAquarium/ClaimRewards (RemoteEvent)
+  - RE/PersonalAquarium/ActivateFishFood (RemoteEvent)
+  - RE/PersonalAquarium/PurchaseFishFood (RemoteEvent)
+  - RF/PersonalAquarium/Tank/GetEncodedAquariumInfo (RemoteFunction)
+  - RE/PersonalAquarium/Tank/AddedFish (RemoteEvent)
+  - RE/PersonalAquarium/Tank/LostFish (RemoteEvent)
+  - RF/PersonalAquarium/JoinUnavailableAquarium (RemoteFunction)
+  - RE/ReturnToLastIsland (RemoteEvent)
+  - RE/EventAppraiseService/Complete (RemoteEvent)
+  - RE/EventAppraiseService/RequestAppraiseUI (RemoteEvent)
+  - RF/EventAppraiseService/SelectIndex (RemoteFunction)
+  - RE/EventAppraiseService/StartAppraise (RemoteEvent)
+  - RE/EventAppraiseService/CancelAppraise (RemoteEvent)
+  - RE/EventAppraiseService/TakeNow (RemoteEvent)
+  - RE/CarrotService/ClaimCode (RemoteEvent)
+  - RE/WitcherPotion/PlaceFish (RemoteEvent)
+  - RE/WitcherPotion/ClaimFish (RemoteEvent)
+  - RE/WitcherPotion/StartCraft (RemoteEvent)
+  - RE/WitcherPotion/SelectRecipe (RemoteEvent)
+  - RE/WitcherPotion/TakePotion (RemoteEvent)
+  - RE/ReputationQuests/Reload (RemoteEvent)
+  - RE/ReputationQuests/ClaimQuest (RemoteEvent)
+  - RE/ReputationQuests/SelectQuest (RemoteEvent)
+  - RE/ReputationQuests/AskToRefreshQuests (RemoteEvent)
+  - RE/FriendsQuestService/ToggleFriendsQuestUI (RemoteEvent)
+  - RE/FriendsQuestService/UpdateQuest (RemoteEvent)
+  - RE/FriendsQuestService/Invite (RemoteEvent)
+  - RE/FriendsQuestService/AcceptInvite (RemoteEvent)
+  - RF/FriendsQuestService/Spin (RemoteFunction)
+  - RF/Aquarium/GetFish (RemoteFunction)
+  - RE/SalesBoothService/UpdateInfo (RemoteEvent)
+  - RF/SalesBoothService/RequestSalesBoothInfo (RemoteFunction)
+  - RE/SalesBoothService/Claim (RemoteEvent)
+  - RE/SalesBoothService/AddItem (RemoteEvent)
+  - RE/SalesBoothService/RemoveItem (RemoteEvent)
+  - RE/SalesBoothService/FavoriteItem (RemoteEvent)
+  - RE/SalesBoothService/PurchaseItem (RemoteEvent)
+  - RE/SalesBoothService/EquipSkin (RemoteEvent)
+  - RF/VideoAds/Play (RemoteFunction)
+  - RE/VenueHatchUpdate (RemoteEvent)
+  - RE/Guide/ReplicateQuests (RemoteEvent)
+  - RE/CthuluAttack (RemoteEvent)
+  - RF/DialogInteract (RemoteFunction)
+  - RE/AnglerfishMinigame/FishSpawn (RemoteEvent)
+  - RE/AnglerfishMinigame/DeathEffect (RemoteEvent)
+  - RE/ChessMinigame/Interact (RemoteEvent)
+  - RE/ChessMinigame/MovePiece (RemoteEvent)
+  - RE/ChessMinigame/OpenGate (RemoteEvent)
+  - RE/ChessMinigame/ResetPieces (RemoteEvent)
+  - RE/ChessMinigame/StartTimer (RemoteEvent)
+  - RE/FishPodium/LoadPodium (RemoteEvent)
+  - RE/FishPodium/Place (RemoteEvent)
+  - RF/ZeusPuzzle/GetDoorState (RemoteFunction)
+  - RF/ZeusPuzzle/CheckCode (RemoteFunction)
+  - RE/ShellMerchant/Open (RemoteEvent)
+  - RE/MilaHunt/Start (RemoteEvent)
+  - RF/SubmarineSpawnRequestSubmariner (RemoteFunction)
+  - RE/Monetization/UpdateCreditsPrice (RemoteEvent)
+  - RF/LimitedBobbers.BuyBundleWithCoins (RemoteFunction)
+  - RE/AquariumDialog/NpcStatus (RemoteEvent)
+  - RE/DailyReward/Show (RemoteEvent)
+  - RE/DailyReward/Claim (RemoteEvent)
+  - RE/Quests/ToggleTrack (RemoteEvent)
+  - RE/ResilienceModifier (RemoteEvent)
+  - RE/ZenithMinigameStatus (RemoteEvent)
+
+🔄 TRYING ALTERNATIVE PATHS:
+------------------------------
+❌ Failed: ReplicatedStorage.packages.Net.RF.SkinCrates.Purchase
+❌ Failed: ReplicatedStorage.packages.Net.RemoteFunctions.SkinCrates.Purchase
+❌ Failed: ReplicatedStorage.packages.Net.Remotes.SkinCrates.Purchase
+❌ Failed: ReplicatedStorage.Remotes.SkinCrates.Purchase
+❌ Failed: ReplicatedStorage.RemoteFunctions.SkinCrates.Purchase
+❌ Failed: ReplicatedStorage.Net.RF.SkinCrates.Purchase
+❌ Failed: ReplicatedStorage.Net.SkinCrates.Purchase
+
+🎯 SEARCH COMPLETE!
+Look for lines marked with 🎯 SKIN CRATES RELATED!
+========================================
+
+💾 SAVING RESULTS...
