@@ -9,12 +9,22 @@ local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
--- Skin Crates data
+-- Skin Crates data (dengan alternative spellings)
 local skinCratesData = {
-    "Moosewood", "Desolate", "Cthulu", "Ancient", "Mariana's",
+    "Moosewood", "Desolate", "Cthulu", "Ancient", "Marianas", -- Changed Mariana's to Marianas
     "Cosmetic Case", "Cosmetic Case Legendary", "Atlantis", 
     "Cursed", "Cultist", "Coral", "Friendly", 
     "Red Marlins", "Midas' Mates", "Ghosts"
+}
+
+-- Alternative crate names to try if main name fails
+local alternativeCrateNames = {
+    ["Mariana's"] = {"Marianas", "Mariana", "Mari"},
+    ["Cthulu"] = {"Cthulhu", "Cth", "Cthulu"},
+    ["Red Marlins"] = {"RedMarlins", "Red_Marlins", "Red"},
+    ["Midas' Mates"] = {"Midas_Mates", "MidasMates", "Midas"},
+    ["Cosmetic Case"] = {"Cosmetic_Case", "CosmeticCase", "Cosm"},
+    ["Cosmetic Case Legendary"] = {"Cosmetic_Case_Legendary", "CosmeticCaseLegendary", "CosmLeg"}
 }
 
 -- Settings
@@ -48,11 +58,29 @@ end
 local function purchaseCrate(crateName)
     if not remotes.purchase then return false end
     
-    local success, response = pcall(function()
-        return remotes.purchase:InvokeServer(crateName)
-    end)
+    -- Function untuk test nama crate
+    local function tryPurchase(name)
+        local success, response = pcall(function()
+            return remotes.purchase:InvokeServer(name)
+        end)
+        return success and response ~= nil and response ~= false
+    end
     
-    return success
+    -- Coba nama asli dulu
+    if tryPurchase(crateName) then
+        return true
+    end
+    
+    -- Jika gagal, coba alternative names
+    if alternativeCrateNames[crateName] then
+        for _, altName in ipairs(alternativeCrateNames[crateName]) do
+            if tryPurchase(altName) then
+                return true
+            end
+        end
+    end
+    
+    return false
 end
 
 local function spinCrate(crateName)

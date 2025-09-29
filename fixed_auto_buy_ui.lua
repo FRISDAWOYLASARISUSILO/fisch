@@ -9,12 +9,22 @@ local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
--- Skin Crates data (dari dump.txt)
+-- Skin Crates data (dengan alternative spellings)
 local skinCratesData = {
-    "Moosewood", "Desolate", "Cthulu", "Ancient", "Mariana's",
+    "Moosewood", "Desolate", "Cthulu", "Ancient", "Marianas", -- Changed Mariana's to Marianas
     "Cosmetic Case", "Cosmetic Case Legendary", "Atlantis", 
     "Cursed", "Cultist", "Coral", "Friendly", 
     "Red Marlins", "Midas' Mates", "Ghosts"
+}
+
+-- Alternative crate names to try if main name fails
+local alternativeCrateNames = {
+    ["Mariana's"] = {"Marianas", "Mariana", "Mari"},
+    ["Cthulu"] = {"Cthulhu", "Cth", "Cthulu"},
+    ["Red Marlins"] = {"RedMarlins", "Red_Marlins", "Red"},
+    ["Midas' Mates"] = {"Midas_Mates", "MidasMates", "Midas"},
+    ["Cosmetic Case"] = {"Cosmetic_Case", "CosmeticCase", "Cosm"},
+    ["Cosmetic Case Legendary"] = {"Cosmetic_Case_Legendary", "CosmeticCaseLegendary", "CosmLeg"}
 }
 
 -- Settings
@@ -240,24 +250,48 @@ local function purchaseCrate(crateName)
         return false, "Purchase remote not available"
     end
     
-    debugLog("🛒 Attempting to purchase: " .. crateName)
-    
-    local success, response = pcall(function()
-        return remotes.purchase:InvokeServer(crateName)
-    end)
-    
-    if success then
-        debugLog("✅ Purchase response for " .. crateName .. ": " .. tostring(response))
-        -- Response bisa berupa boolean, table, atau string
-        if response == true or (type(response) == "table" and response.success) or response == "success" then
-            return true, response
+    -- Function untuk test nama crate
+    local function tryPurchase(name)
+        debugLog("🛒 Attempting to purchase: " .. name)
+        local success, response = pcall(function()
+            return remotes.purchase:InvokeServer(name)
+        end)
+        
+        if success then
+            debugLog("✅ Purchase response for " .. name .. ": " .. tostring(response))
+            -- Response bisa berupa boolean, table, atau string
+            if response == true or (type(response) == "table" and response.success) or response == "success" then
+                return true, response
+            else
+                return false, response
+            end
         else
+            debugLog("❌ Purchase error for " .. name .. ": " .. tostring(response))
             return false, response
         end
-    else
-        debugLog("❌ Purchase error for " .. crateName .. ": " .. tostring(response))
-        return false, response
     end
+    
+    -- Coba nama asli dulu
+    local success, result = tryPurchase(crateName)
+    if success then
+        return true, result
+    end
+    
+    -- Jika gagal, coba alternative names
+    if alternativeCrateNames[crateName] then
+        debugLog("🔄 Trying alternative names for: " .. crateName)
+        for _, altName in ipairs(alternativeCrateNames[crateName]) do
+            success, result = tryPurchase(altName)
+            if success then
+                debugLog("✅ Success with alternative name: " .. altName)
+                return true, result
+            end
+        end
+    end
+    
+    -- Jika masih gagal
+    debugLog("❌ All purchase attempts failed for: " .. crateName)
+    return false, "All names failed"
 end
 
 local function spinCrate(crateName)
