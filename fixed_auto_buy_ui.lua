@@ -361,9 +361,10 @@ local function startAutoBuy()
     
     updateStatus("🎯 REMOTES CONNECTED! Starting purchases...", Color3.fromRGB(0, 255, 0))
     
-    local totalPurchases = 0
-    local successfulPurchases = 0
-    local failedPurchases = 0
+    -- Initialize counters with explicit numbers to prevent nil
+    local totalPurchases = tonumber(0)
+    local successfulPurchases = tonumber(0)
+    local failedPurchases = tonumber(0)
     
     for i = 1, settings.maxPurchases do
         if not settings.enabled then break end
@@ -377,8 +378,8 @@ local function startAutoBuy()
             
             -- Nil safety checks
             if purchaseSuccess == true then
-                successfulPurchases = successfulPurchases + 1
-                totalPurchases = totalPurchases + 1
+                successfulPurchases = (successfulPurchases or 0) + 1
+                totalPurchases = (totalPurchases or 0) + 1
                 updateStatus("✅ SUCCESS: Bought " .. tostring(crateName), Color3.fromRGB(0, 255, 0))
                 
                 if settings.autoSpin == true then
@@ -391,7 +392,7 @@ local function startAutoBuy()
                     end
                 end
             else
-                failedPurchases = failedPurchases + 1
+                failedPurchases = (failedPurchases or 0) + 1
                 local errorMsg = "❌ FAILED: " .. tostring(crateName)
                 if purchaseResponse and purchaseResponse ~= nil then
                     if type(purchaseResponse) == "string" then
@@ -412,8 +413,12 @@ local function startAutoBuy()
         end
     end
     
-    local finalMessage = string.format("🏁 COMPLETE! ✅ %d success | ❌ %d failed", successfulPurchases, failedPurchases)
-    updateStatus(finalMessage, successfulPurchases > 0 and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 100, 0))
+    -- Nil safety for final message
+    local safeSuccessful = tonumber(successfulPurchases) or 0
+    local safeFailed = tonumber(failedPurchases) or 0
+    
+    local finalMessage = string.format("🏁 COMPLETE! ✅ %d success | ❌ %d failed", safeSuccessful, safeFailed)
+    updateStatus(finalMessage, safeSuccessful > 0 and Color3.fromRGB(0, 255, 0) or Color3.fromRGB(255, 100, 0))
     settings.enabled = false
     updateMainButton()
 end
