@@ -226,10 +226,10 @@ local function createFixedUI()
     gui.ResetOnSpawn = false
     gui.Parent = playerGui
     
-    -- Main Frame
+    -- Main Frame (made taller for crate selector)
     local mainFrame = Instance.new("Frame")
     mainFrame.Name = "MainFrame"
-    mainFrame.Size = UDim2.new(0, 350, 0, 450)
+    mainFrame.Size = UDim2.new(0, 350, 0, 620)
     mainFrame.Position = UDim2.new(1, -370, 0, 20)
     mainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     mainFrame.BorderSizePixel = 0
@@ -405,10 +405,263 @@ local function createFixedUI()
     spinToggleCorner.CornerRadius = UDim.new(0, 4)
     spinToggleCorner.Parent = spinToggle
     
-    -- Status section
+    -- Skin Crates Selection Frame
+    local cratesFrame = Instance.new("Frame")
+    cratesFrame.Size = UDim2.new(1, -20, 0, 160)
+    cratesFrame.Position = UDim2.new(0, 10, 0, 245)
+    cratesFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    cratesFrame.BorderSizePixel = 0
+    cratesFrame.Parent = mainFrame
+    
+    local cratesCorner = Instance.new("UICorner")
+    cratesCorner.CornerRadius = UDim.new(0, 6)
+    cratesCorner.Parent = cratesFrame
+    
+    local cratesTitle = Instance.new("TextLabel")
+    cratesTitle.Size = UDim2.new(1, 0, 0, 20)
+    cratesTitle.Position = UDim2.new(0, 5, 0, 5)
+    cratesTitle.BackgroundTransparency = 1
+    cratesTitle.Text = "🎯 Select Skin Crates to Buy:"
+    cratesTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+    cratesTitle.TextSize = 12
+    cratesTitle.Font = Enum.Font.GothamSemibold
+    cratesTitle.TextXAlignment = Enum.TextXAlignment.Left
+    cratesTitle.Parent = cratesFrame
+    
+    -- Selection info
+    local selectionInfo = Instance.new("TextLabel")
+    selectionInfo.Size = UDim2.new(1, -10, 0, 15)
+    selectionInfo.Position = UDim2.new(0, 5, 0, 25)
+    selectionInfo.BackgroundTransparency = 1
+    selectionInfo.Text = "Selected: ALL " .. #skinCratesData .. " crates"
+    selectionInfo.TextColor3 = Color3.fromRGB(150, 200, 255)
+    selectionInfo.TextSize = 10
+    selectionInfo.Font = Enum.Font.Gotham
+    selectionInfo.TextXAlignment = Enum.TextXAlignment.Left
+    selectionInfo.Parent = cratesFrame
+    
+    -- Scrolling frame for crates
+    local cratesScroll = Instance.new("ScrollingFrame")
+    cratesScroll.Size = UDim2.new(1, -10, 0, 85)
+    cratesScroll.Position = UDim2.new(0, 5, 0, 45)
+    cratesScroll.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    cratesScroll.BorderSizePixel = 0
+    cratesScroll.ScrollBarThickness = 4
+    cratesScroll.ScrollBarImageColor3 = Color3.fromRGB(100, 100, 100)
+    cratesScroll.Parent = cratesFrame
+    
+    local cratesScrollCorner = Instance.new("UICorner")
+    cratesScrollCorner.CornerRadius = UDim.new(0, 4)
+    cratesScrollCorner.Parent = cratesScroll
+    
+    -- Grid layout for crates
+    local cratesLayout = Instance.new("UIGridLayout")
+    cratesLayout.CellSize = UDim2.new(0, 100, 0, 25)
+    cratesLayout.CellPadding = UDim2.new(0, 2, 0, 2)
+    cratesLayout.SortOrder = Enum.SortOrder.LayoutOrder
+    cratesLayout.Parent = cratesScroll
+    
+    -- Function to update selection info
+    local function updateSelectionInfo()
+        local count = #settings.selectedCrates
+        if count == #skinCratesData then
+            selectionInfo.Text = "Selected: ALL " .. count .. " crates"
+            selectionInfo.TextColor3 = Color3.fromRGB(0, 255, 100)
+        elseif count == 0 then
+            selectionInfo.Text = "Selected: NONE (0 crates)"
+            selectionInfo.TextColor3 = Color3.fromRGB(255, 100, 100)
+        else
+            selectionInfo.Text = "Selected: " .. count .. " crates"
+            selectionInfo.TextColor3 = Color3.fromRGB(150, 200, 255)
+        end
+    end
+    
+    -- Create individual crate buttons
+    local crateButtons = {}
+    for i, crateName in ipairs(skinCratesData) do
+        local crateBtn = Instance.new("TextButton")
+        crateBtn.Name = "CrateBtn_" .. crateName
+        crateBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 0) -- Selected by default
+        crateBtn.BorderSizePixel = 0
+        crateBtn.Text = crateName:len() > 10 and crateName:sub(1, 10) .. ".." or crateName
+        crateBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+        crateBtn.TextSize = 9
+        crateBtn.Font = Enum.Font.GothamSemibold
+        crateBtn.LayoutOrder = i
+        crateBtn.Parent = cratesScroll
+        
+        local crateBtnCorner = Instance.new("UICorner")
+        crateBtnCorner.CornerRadius = UDim.new(0, 3)
+        crateBtnCorner.Parent = crateBtn
+        
+        crateButtons[crateName] = crateBtn
+        
+        -- Toggle selection
+        crateBtn.MouseButton1Click:Connect(function()
+            local isSelected = false
+            for j, selectedCrate in ipairs(settings.selectedCrates) do
+                if selectedCrate == crateName then
+                    -- Remove from selection
+                    table.remove(settings.selectedCrates, j)
+                    crateBtn.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+                    isSelected = false
+                    break
+                end
+            end
+            
+            if not isSelected then
+                -- Check if it was found in selection
+                local found = false
+                for _, selectedCrate in ipairs(settings.selectedCrates) do
+                    if selectedCrate == crateName then
+                        found = true
+                        break
+                    end
+                end
+                
+                if not found then
+                    -- Add to selection
+                    table.insert(settings.selectedCrates, crateName)
+                    crateBtn.BackgroundColor3 = Color3.fromRGB(0, 150, 0)
+                end
+            end
+            
+            updateSelectionInfo()
+        end)
+        
+        -- Hover effects
+        crateBtn.MouseEnter:Connect(function()
+            if not settings.enabled then
+                local currentColor = crateBtn.BackgroundColor3
+                if currentColor == Color3.fromRGB(0, 150, 0) then
+                    TweenService:Create(crateBtn, TweenInfo.new(0.2), {
+                        BackgroundColor3 = Color3.fromRGB(0, 180, 0)
+                    }):Play()
+                else
+                    TweenService:Create(crateBtn, TweenInfo.new(0.2), {
+                        BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+                    }):Play()
+                end
+            end
+        end)
+        
+        crateBtn.MouseLeave:Connect(function()
+            if not settings.enabled then
+                local isSelected = false
+                for _, selectedCrate in ipairs(settings.selectedCrates) do
+                    if selectedCrate == crateName then
+                        isSelected = true
+                        break
+                    end
+                end
+                
+                TweenService:Create(crateBtn, TweenInfo.new(0.2), {
+                    BackgroundColor3 = isSelected and Color3.fromRGB(0, 150, 0) or Color3.fromRGB(60, 60, 60)
+                }):Play()
+            end
+        end)
+    end
+    
+    -- Update scroll canvas size
+    cratesScroll.CanvasSize = UDim2.new(0, 0, 0, math.ceil(#skinCratesData / 3) * 27)
+    
+    -- Quick selection buttons
+    local quickFrame = Instance.new("Frame")
+    quickFrame.Size = UDim2.new(1, -10, 0, 25)
+    quickFrame.Position = UDim2.new(0, 5, 0, 130)
+    quickFrame.BackgroundTransparency = 1
+    quickFrame.Parent = cratesFrame
+    
+    -- Select All button
+    local selectAllBtn = Instance.new("TextButton")
+    selectAllBtn.Size = UDim2.new(0.32, 0, 1, 0)
+    selectAllBtn.Position = UDim2.new(0, 0, 0, 0)
+    selectAllBtn.BackgroundColor3 = Color3.fromRGB(0, 120, 200)
+    selectAllBtn.BorderSizePixel = 0
+    selectAllBtn.Text = "SELECT ALL"
+    selectAllBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    selectAllBtn.TextSize = 9
+    selectAllBtn.Font = Enum.Font.GothamBold
+    selectAllBtn.Parent = quickFrame
+    
+    local selectAllCorner = Instance.new("UICorner")
+    selectAllCorner.CornerRadius = UDim.new(0, 3)
+    selectAllCorner.Parent = selectAllBtn
+    
+    -- Clear Selection button
+    local clearBtn = Instance.new("TextButton")
+    clearBtn.Size = UDim2.new(0.32, 0, 1, 0)
+    clearBtn.Position = UDim2.new(0.34, 0, 0, 0)
+    clearBtn.BackgroundColor3 = Color3.fromRGB(200, 100, 0)
+    clearBtn.BorderSizePixel = 0
+    clearBtn.Text = "CLEAR ALL"
+    clearBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    clearBtn.TextSize = 9
+    clearBtn.Font = Enum.Font.GothamBold
+    clearBtn.Parent = quickFrame
+    
+    local clearCorner = Instance.new("UICorner")
+    clearCorner.CornerRadius = UDim.new(0, 3)
+    clearCorner.Parent = clearBtn
+    
+    -- Popular Selection button
+    local popularBtn = Instance.new("TextButton")
+    popularBtn.Size = UDim2.new(0.32, 0, 1, 0)
+    popularBtn.Position = UDim2.new(0.68, 0, 0, 0)
+    popularBtn.BackgroundColor3 = Color3.fromRGB(150, 0, 150)
+    popularBtn.BorderSizePixel = 0
+    popularBtn.Text = "POPULAR"
+    popularBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    popularBtn.TextSize = 9
+    popularBtn.Font = Enum.Font.GothamBold
+    popularBtn.Parent = quickFrame
+    
+    local popularCorner = Instance.new("UICorner")
+    popularCorner.CornerRadius = UDim.new(0, 3)
+    popularCorner.Parent = popularBtn
+    
+    -- Quick selection events
+    selectAllBtn.MouseButton1Click:Connect(function()
+        settings.selectedCrates = {}
+        for _, crateName in ipairs(skinCratesData) do
+            table.insert(settings.selectedCrates, crateName)
+            crateButtons[crateName].BackgroundColor3 = Color3.fromRGB(0, 150, 0)
+        end
+        updateSelectionInfo()
+    end)
+    
+    clearBtn.MouseButton1Click:Connect(function()
+        settings.selectedCrates = {}
+        for _, crateName in ipairs(skinCratesData) do
+            crateButtons[crateName].BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+        end
+        updateSelectionInfo()
+    end)
+    
+    popularBtn.MouseButton1Click:Connect(function()
+        -- Select popular crates
+        local popularCrates = {"Moosewood", "Ancient", "Desolate", "Cthulu", "Mariana's"}
+        settings.selectedCrates = {}
+        
+        -- First clear all
+        for _, crateName in ipairs(skinCratesData) do
+            crateButtons[crateName].BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+        end
+        
+        -- Then select popular ones
+        for _, crateName in ipairs(popularCrates) do
+            table.insert(settings.selectedCrates, crateName)
+            if crateButtons[crateName] then
+                crateButtons[crateName].BackgroundColor3 = Color3.fromRGB(0, 150, 0)
+            end
+        end
+        updateSelectionInfo()
+    end)
+    
+    -- Status section (moved down to make room for crate selector)
     local statusFrame = Instance.new("Frame")
-    statusFrame.Size = UDim2.new(1, -20, 0, 120)
-    statusFrame.Position = UDim2.new(0, 10, 0, 245)
+    statusFrame.Size = UDim2.new(1, -20, 0, 100)
+    statusFrame.Position = UDim2.new(0, 10, 0, 415)
     statusFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     statusFrame.BorderSizePixel = 0
     statusFrame.Parent = mainFrame
@@ -429,10 +682,10 @@ local function createFixedUI()
     statusTitle.Parent = statusFrame
     
     statusLabel = Instance.new("TextLabel")
-    statusLabel.Size = UDim2.new(1, -10, 0, 60)
+    statusLabel.Size = UDim2.new(1, -10, 0, 50)
     statusLabel.Position = UDim2.new(0, 5, 0, 25)
     statusLabel.BackgroundTransparency = 1
-    statusLabel.Text = "🎯 READY! Paths have been FIXED from scan results.\nClick TEST CONNECTION first!"
+    statusLabel.Text = "🎯 READY! Select crates above, test connection, then start!"
     statusLabel.TextColor3 = Color3.fromRGB(0, 255, 100)
     statusLabel.TextSize = 11
     statusLabel.Font = Enum.Font.Gotham
@@ -442,8 +695,8 @@ local function createFixedUI()
     statusLabel.Parent = statusFrame
     
     purchaseCountLabel = Instance.new("TextLabel")
-    purchaseCountLabel.Size = UDim2.new(1, -10, 0, 30)
-    purchaseCountLabel.Position = UDim2.new(0, 5, 0, 85)
+    purchaseCountLabel.Size = UDim2.new(1, -10, 0, 20)
+    purchaseCountLabel.Position = UDim2.new(0, 5, 0, 75)
     purchaseCountLabel.BackgroundTransparency = 1
     purchaseCountLabel.Text = "✅ Success: 0 | ❌ Failed: 0 | 📊 Total: 0"
     purchaseCountLabel.TextColor3 = Color3.fromRGB(150, 200, 255)
@@ -452,11 +705,11 @@ local function createFixedUI()
     purchaseCountLabel.TextXAlignment = Enum.TextXAlignment.Left
     purchaseCountLabel.Parent = statusFrame
     
-    -- Main button with emphasis
+    -- Main button with emphasis (moved to bottom)
     local mainButton = Instance.new("TextButton")
     mainButton.Name = "MainButton"
     mainButton.Size = UDim2.new(1, -20, 0, 45)
-    mainButton.Position = UDim2.new(0, 10, 0, 385)
+    mainButton.Position = UDim2.new(0, 10, 0, 555)
     mainButton.BackgroundColor3 = Color3.fromRGB(0, 200, 100)
     mainButton.BorderSizePixel = 0
     mainButton.Text = "🎯 START FIXED AUTO BUY"
@@ -508,6 +761,9 @@ local function createFixedUI()
     TweenService:Create(mainFrame, TweenInfo.new(0.5, Enum.EasingStyle.Back), {
         Position = UDim2.new(1, -370, 0, 20)
     }):Play()
+    
+    -- Initialize selection info
+    updateSelectionInfo()
     
     -- Auto-test connection on load
     wait(1)
