@@ -9,22 +9,33 @@ local TweenService = game:GetService("TweenService")
 local player = Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
 
--- Skin Crates data (dengan alternative spellings)
+-- Skin Crates data (updated based on testing results)
 local skinCratesData = {
-    "Moosewood", "Desolate", "Cthulu", "Ancient", "Marianas", -- Changed Mariana's to Marianas
+    "Moosewood", "Desolate", "Cthulhu", "Ancient", "Mariana", -- Fixed spellings
     "Cosmetic Case", "Cosmetic Case Legendary", "Atlantis", 
     "Cursed", "Cultist", "Coral", "Friendly", 
-    "Red Marlins", "Midas' Mates", "Ghosts"
+    "Red Marlins", "Midas Mates", "Ghosts" -- Removed apostrophe
 }
 
--- Alternative crate names to try if main name fails
+-- Extensive alternative crate names based on common patterns
 local alternativeCrateNames = {
-    ["Mariana's"] = {"Marianas", "Mariana", "Mari"},
-    ["Cthulu"] = {"Cthulhu", "Cth", "Cthulu"},
-    ["Red Marlins"] = {"RedMarlins", "Red_Marlins", "Red"},
-    ["Midas' Mates"] = {"Midas_Mates", "MidasMates", "Midas"},
-    ["Cosmetic Case"] = {"Cosmetic_Case", "CosmeticCase", "Cosm"},
-    ["Cosmetic Case Legendary"] = {"Cosmetic_Case_Legendary", "CosmeticCaseLegendary", "CosmLeg"}
+    ["Mariana's"] = {"Mariana", "Marianas", "Mari", "MarianaTrench", "mariana"},
+    ["Marianas"] = {"Mariana", "Mariana's", "Mari", "MarianaTrench", "mariana"},
+    ["Cthulu"] = {"Cthulhu", "Cthulu", "Cth", "cthulhu", "cthulu"},
+    ["Cthulhu"] = {"Cthulu", "Cthulhu", "Cth", "cthulhu", "cthulu"},
+    ["Red Marlins"] = {"RedMarlins", "Red_Marlins", "Red", "redmarlins", "red"},
+    ["Midas' Mates"] = {"Midas Mates", "MidasMates", "Midas_Mates", "Midas", "midas"},
+    ["Midas Mates"] = {"Midas' Mates", "MidasMates", "Midas_Mates", "Midas", "midas"},
+    ["Cosmetic Case"] = {"CosmeticCase", "Cosmetic_Case", "Cosm", "cosmetic", "cosmeticcase"},
+    ["Cosmetic Case Legendary"] = {"CosmeticCaseLegendary", "Cosmetic_Case_Legendary", "CosmLeg", "legendary", "cosmeticlegendary"},
+    ["Ancient"] = {"ancient", "Ancient", "Anc"},
+    ["Desolate"] = {"desolate", "Desolate", "Des"},
+    ["Atlantis"] = {"atlantis", "Atlantis", "Atl"},
+    ["Cursed"] = {"cursed", "Cursed", "Cur"},
+    ["Cultist"] = {"cultist", "Cultist", "Cult"},
+    ["Coral"] = {"coral", "Coral", "Cor"},
+    ["Friendly"] = {"friendly", "Friendly", "Friend"},
+    ["Ghosts"] = {"ghosts", "Ghosts", "Ghost"}
 }
 
 -- Settings
@@ -317,15 +328,20 @@ end
 
 -- Update status with color coding
 local function updateStatus(text, color, isError)
-    if statusLabel then
-        statusLabel.Text = text
-        statusLabel.TextColor3 = color or Color3.fromRGB(255, 255, 255)
+    -- Nil safety for text parameter
+    local safeText = tostring(text or "Unknown status")
+    
+    if statusLabel and statusLabel.Parent then
+        pcall(function()
+            statusLabel.Text = safeText
+            statusLabel.TextColor3 = color or Color3.fromRGB(255, 255, 255)
+        end)
     end
     
     if isError then
-        debugLog("ERROR: " .. text)
+        debugLog("ERROR: " .. safeText)
     else
-        debugLog("STATUS: " .. text)
+        debugLog("STATUS: " .. safeText)
     end
 end
 
@@ -359,24 +375,25 @@ local function startAutoBuy()
             
             local purchaseSuccess, purchaseResponse = purchaseCrate(crateName)
             
-            if purchaseSuccess then
+            -- Nil safety checks
+            if purchaseSuccess == true then
                 successfulPurchases = successfulPurchases + 1
                 totalPurchases = totalPurchases + 1
-                updateStatus("✅ SUCCESS: Bought " .. crateName, Color3.fromRGB(0, 255, 0))
+                updateStatus("✅ SUCCESS: Bought " .. tostring(crateName), Color3.fromRGB(0, 255, 0))
                 
-                if settings.autoSpin then
+                if settings.autoSpin == true then
                     wait(0.5)
                     local spinSuccess, spinResponse = spinCrate(crateName)
-                    if spinSuccess then
-                        updateStatus("🎲 SPUN: " .. crateName, Color3.fromRGB(100, 255, 100))
+                    if spinSuccess == true then
+                        updateStatus("🎲 SPUN: " .. tostring(crateName), Color3.fromRGB(100, 255, 100))
                     else
-                        updateStatus("⚠️ Bought but spin failed: " .. crateName, Color3.fromRGB(255, 255, 0))
+                        updateStatus("⚠️ Bought but spin failed: " .. tostring(crateName), Color3.fromRGB(255, 255, 0))
                     end
                 end
             else
                 failedPurchases = failedPurchases + 1
-                local errorMsg = "❌ FAILED: " .. crateName
-                if purchaseResponse then
+                local errorMsg = "❌ FAILED: " .. tostring(crateName)
+                if purchaseResponse and purchaseResponse ~= nil then
                     if type(purchaseResponse) == "string" then
                         errorMsg = errorMsg .. " (" .. purchaseResponse .. ")"
                     elseif type(purchaseResponse) == "table" and purchaseResponse.error then
